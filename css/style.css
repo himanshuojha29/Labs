@@ -19,7 +19,14 @@ body {
   width: 100%;
   height: 100%;
 }
-
+.coursor {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color:#b09d9fd7;
+  position: fixed;
+  z-index: 10;
+}
 #main {
   width: 100%;
   height: 100%;
@@ -57,10 +64,16 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
-  /* font-weight: 500; */
-  cursor: pointer;
   font-weight: lighter;
   letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  /* border-color: white;  */
+  /* border: 0.1px solid  white;
+  padding: 10px 10px;
+  border-radius: 25px */
 }
 
 .shop-btn {
@@ -68,6 +81,12 @@ body {
   border-radius: 25px;
   padding: 12px 20px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.shop-btn:hover {
+  background-color: white;
+  color: black;
 }
 
 .right-icons {
@@ -98,7 +117,6 @@ body {
   color: #f2ece299;
   letter-spacing: -0.01em;
   font-size: 1.125rem;
-  line-height: 124%;
 }
 
 .textBottom h1 {
@@ -163,15 +181,12 @@ body {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .card {
   background-color: white;
   border-radius: 25px;
-  /* padding: 20px; */
   width: 330px;
-  /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06); */
   text-align: start;
 }
 
@@ -233,10 +248,9 @@ body {
   cursor: pointer;
 }
 
-/* Make both text and icon transformable */
 .btn-text,
 .all-products-btn1 i {
-  display: inline-block; /* Required for transform */
+  display: inline-block;
   transition: transform 0.3s ease;
 }
 
@@ -342,7 +356,6 @@ body {
 
 .benefit-card {
   display: flex;
-  flex-wrap: wrap;
   border-radius: 40px;
   height: 66vh;
   overflow: hidden;
@@ -353,13 +366,12 @@ body {
 
 .image-container {
   position: relative;
-  flex: 1;
   min-width: 300px;
 }
 
 .image-container img {
   width: 100%;
-  height: 95%;
+  height: 100%;
   object-fit: cover;
   border-radius: 40px;
 }
@@ -475,8 +487,8 @@ body {
 .hero-button,
 .all-products-btn {
   display: inline-block;
-  background-color: white;     /* White background */
-  color: black;                /* Black text and icon */
+  background-color: white;
+  color: black;
   padding: 20px 30px;
   border-radius: 40px;
   font-weight: bold;
@@ -486,7 +498,6 @@ body {
   cursor: pointer;
 }
 
-/* Ensure text and icon can be transformed */
 .hero-button .btn-text,
 .hero-button i,
 .all-products-btn .btn-text,
@@ -495,7 +506,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .hero-box {
     padding: 40px 30px;
   }
@@ -507,12 +518,11 @@ body {
   .hero-content p {
     font-size: 1.2rem;
   }
-} */
+}
 
 .section-7 {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 40px;
   max-width: 1050px;
   margin: auto;
@@ -539,9 +549,7 @@ body {
   color: #000;
 }
 
-.call-button,
-.hero-button,
-.all-products-btn {
+.call-button {
   margin-top: 30px;
   display: inline-block;
   background: #000;
@@ -553,18 +561,7 @@ body {
   letter-spacing: 1px;
   cursor: pointer;
   border: 1px solid black;
-  text-decoration: none; /* Remove underline from link */
-}
-
-/* Make icon and text movable */
-.call-button .btn-text,
-.call-button i,
-.hero-button .btn-text,
-.hero-button i,
-.all-products-btn .btn-text,
-.all-products-btn i {
-  display: inline-block;
-  transition: transform 0.3s ease;
+  text-decoration: none;
 }
 .faq-list {
   flex: 1;
@@ -718,7 +715,6 @@ body {
   }
 }
 
-
-.section-8{
-    padding: 50px 0px;
+.section-8 {
+  padding: 50px 0px;
 }

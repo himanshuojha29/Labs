@@ -1,3 +1,12 @@
+var coursor = document.querySelector(".coursor");
+main.addEventListener("mousemove", function(dets){
+    gsap.to(coursor, {
+        x:dets.x,
+        y:dets.y,
+        duration:1,
+    })
+})
+
 gsap.to(".navbar", {
   y: -100,
   scrollTrigger: {
@@ -10,6 +19,22 @@ gsap.to(".navbar", {
   },
 });
 
+// multi card gsap 
+gsap.utils.toArray(".benefit-card").forEach((card) => {
+  gsap.from(card, {
+    y: 50,
+    opacity: 0,
+    scale: 0.95, // 🔥 Adds pop-up feel
+    duration: 0.8,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: card,
+      scroller: "body",
+      start: "top 85%",
+      toggleActions: "play none none none", // Play once when it enters
+    },
+  });
+});
 
 // section-3 btn
 const allProductsBtn = document.querySelector(".all-products-btn1");
@@ -26,8 +51,6 @@ allProductsBtn.addEventListener("mouseleave", function () {
   text.style.transform = "translateX(0)";
 });
 
-
-
 // For .hero-button
 const heroButton = document.querySelector(".hero-button");
 const icon2 = heroButton.querySelector("i");
@@ -42,7 +65,6 @@ heroButton.addEventListener("mouseleave", function () {
   icon2.style.transform = "translateX(0)";
   text2.style.transform = "translateX(0)";
 });
-
 
 // section-7
 // Call button
@@ -60,7 +82,6 @@ callButton.addEventListener("mouseleave", function () {
   text3.style.transform = "translateX(0)";
 });
 
-
 // section2- multiple img
 var minimg = document.querySelectorAll(".minimg");
 minimg.forEach(function (e) {
@@ -69,11 +90,10 @@ minimg.forEach(function (e) {
     e.style.transition = "transform 0.3s ease"; // Optional smooth animation
   });
 
-   e.addEventListener("mouseleave", function (val) {
+  e.addEventListener("mouseleave", function (val) {
     e.style.transform = "scale(1)";
   });
 });
-
 
 // section-4 watch img
 
